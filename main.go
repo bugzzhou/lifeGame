@@ -21,7 +21,7 @@ func generate() {
 		for j:=0;j<length;j++ {
 			num := count(i, j)
 			if newSoc[i][j] == 0 && num == 3 {
-				newSoc[i][j] = 0
+				newSoc[i][j] = 1
 			} else if newSoc[i][j] == 1 {
 				if num != 2 && num != 3 {
 					newSoc[i][j] = 0
