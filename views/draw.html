@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="refresh" content="0.8" >
+    <title>自动刷新页面</title>
+</head>
+<body>
+<script type="text/javascript">
+    // let social = new Array(10)
+    // for (var i=0;i<10;i++) {
+    //     social[i] = new Array(10)
+    // }
+    var social = {{.json}}
+    document.writeln("<table width='80' height='80' border='1'>")
+    for (var i = 0; i < 10; i++) {
+        document.writeln("<tr>");
+        for (var j = 0; j < 10; j++) {
+            if (social[i][j] != 1)
+                document.writeln("<td bgcolor='"+"white"+"'></td>")
+            else
+                document.writeln("<td bgcolor='"+"black"+"'></td>")
+        }
+        document.writeln("</tr>");
+    }
+
+    document.writeln("</table>");
+</script>
+</body>
+</html>
