@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="map.js">  </script>
+    <div id="testSlice">
+        <button onclick="get2Slice()"> 迭代一次 </button>
+        <button onclick="reset()"> 重置元素细胞机 </button>
+        <h2> 这是第二个测试fetch的页面 </h2>
+        <p id="change"> 需要替换的部分 </p>
+    </div>
+    <div id="testPost">
+        <h2> 这是第三个测试fetch的页面 </h2>
+        <p>时间间隔"ms"</p>
+        <input id="interval" type="number" value="1000">
+        <button onclick="init()"> 设置时间间隔 </button>
+        <p>迭代次数</p>
+        <input id="number" type="number" value="2">
+        <button onclick="sendNum()"> 迭代n次数 </button>
+        <p id="change11"> 需要替换的部分 </p>
+    </div>
+</body>
+
+</html>

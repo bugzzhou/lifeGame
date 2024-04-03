@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>生命游戏</title>
+</head>
+<body>
+<input id="number" type="number" value="42">
+<input type="button" value="单次更迭" onclick="refreshTable1()">
+<input type="button" value="重新随机生成" onclick="redirectToApi()">
+<script type="text/javascript">
+    function redirectToApi() {
+        window.location.href = '/reset';
+    }
+    function refreshTable1() {
+        window.location.href = '/autofresh';
+    }
+
+    refreshTable2()
+
+    function refreshTable() {
+        var social = {{.json}}
+        document.writeln("<table width='150' height='150' border='1'>")
+        for (var i = 0; i < 10; i++) {
+            document.writeln("<tr>");
+            for (var j = 0; j < 10; j++) {
+                if (social[i][j] != 1)
+                    document.writeln("<td bgcolor='"+"white"+"'></td>")
+                else
+                    document.writeln("<td bgcolor='"+"black"+"'></td>")
+            }
+            document.writeln("</tr>");
+        }
+
+        document.writeln("</table>");
+    }
+
+    function refreshTable2() {
+        var social = {{.json}}
+        var res = ""
+        res += "<table width='150' height='150' border='1'>"
+        for (var i = 0; i < 10; i++) {
+            document.writeln("<tr>");
+            for (var j = 0; j < 10; j++) {
+                if (social[i][j] != 1)
+                    res += "<td bgcolor='"+"white"+"'></td>"
+                else
+                    res += "<td bgcolor='"+"black"+"'></td>"
+            }
+            res += "</tr>"
+        }
+        res += "</table>"
+        document.write(res)
+    }
+
+</script>
+
+</body>
+</html>
